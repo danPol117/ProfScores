@@ -3,8 +3,13 @@
   "name": "ProfScores",
   "description": "Making registration easier",
   "version": "1.0",
-  "action": {
-    "default_popup": "default.html",
-    "default_icon": "icon.png"
-  }
+  "permissions": ["activeTab", "storage", "scripting"],
+  "host_permissions": ["*://*.ratemyprofessors.com/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://generalssb-prod.ec.njit.edu/*"],
+      "js": ["content.js"],
+      "css": ["styles.css"]
+    }
+  ]
 }
