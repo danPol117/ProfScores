@@ -1,23 +1,80 @@
 <!DOCTYPE html>
-<html> lang="en"
+<html> 
   <head>
       <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width ,intia-scale=1.0">
+      <meta name="viewport" content="width=device-width ,initial-scale=1.0">
       <title>ProfScores</title>
       <style>
-        body{
-          background-color: black;
-          color: white;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          height: 100vh;
+        body {
+          background-color: white;
+          color: black;
           margin: 0;
-          font-family: Arial, sans-serif;
+          font-family: 'Courier New', monospace;
+        }
+
+        label {
+          font-size: 18px;
+          color: black; /* Make the label visible on white background */
+          margin-bottom: 8px;
+          display: block;
+        }
+
+        input[type="text"] {
+          padding: 10px;
+          font-size: 16px;
+          width: 250px;
+          border: 2px solid #ccc;
+          border-radius: 5px;
+          background-color: #333;
+          color: white;
+        }
+
+        input[type="text"]:focus {
+          border-color: #4CAF50;
+          outline: none;
+        }
+
+        h1 {
+          position: absolute;
+          top: 10px;
+          left: 10px;
+          font-size: 20px;
+          margin: 0;
+          text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
+        }
+
+        .form-container {
+          margin-top: 60px; /* Adds space below the title */
+          padding-left: 10px; /* Align form with title */
+        }
+
+        label {
+          font-size: 18px;
+          color: black; /* Make the label visible on white background */
+          margin-bottom: 8px;
+          display: block;
+        }
+
+        input[type="text"] {
+          padding: 10px;
+          font-size: 16px;
+          width: 250px;
+          border: 2px solid #ccc;
+          border-radius: 5px;
+          background-color: #333;
+          color: white;
+        }
+
+        input[type="text"]:focus {
+          border-color: #4CAF50;
+          outline: none;
         }
       </style>
-</head>
-<body>
-  <h1>ProfScores</h1>
-</body>
+  </head>
+  <body>
+    <h1>ProfScores</h1>
+    <div class="form-container">
+      <input type="text" id="professor" name="professor" placeholder="Enter Professor Name">
+    </div>
+  </body>
 </html>
