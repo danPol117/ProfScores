@@ -11,29 +11,19 @@
           margin: 0;
           font-family: 'Courier New', monospace;
         }
-
+        hr {
+          border: 0;
+          height: 2px;
+          background-color: gray;
+          width: 100%;
+          margin: 23px auto;
+        }
         label {
           font-size: 18px;
-          color: black; /* Make the label visible on white background */
+          color: black; 
           margin-bottom: 8px;
           display: block;
         }
-
-        input[type="text"] {
-          padding: 10px;
-          font-size: 16px;
-          width: 250px;
-          border: 2px solid #ccc;
-          border-radius: 5px;
-          background-color: #333;
-          color: white;
-        }
-
-        input[type="text"]:focus {
-          border-color: #4CAF50;
-          outline: none;
-        }
-
         h1 {
           position: absolute;
           top: 10px;
@@ -42,39 +32,78 @@
           margin: 0;
           text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
         }
-
         .form-container {
-          margin-top: 60px; /* Adds space below the title */
-          padding-left: 10px; /* Align form with title */
+          margin-top: 60px; 
+          padding-left: 10px; 
         }
-
         label {
           font-size: 18px;
-          color: black; /* Make the label visible on white background */
+          color: black; 
           margin-bottom: 8px;
           display: block;
         }
-
         input[type="text"] {
-          padding: 10px;
+          padding: 8px 10px;
           font-size: 16px;
           width: 250px;
-          border: 2px solid #ccc;
-          border-radius: 5px;
-          background-color: #333;
-          color: white;
+          border: none;
+          border-bottom: 2px solid #ccc;
+          background-color: transparent;
+          color: black;
         }
-
         input[type="text"]:focus {
-          border-color: #4CAF50;
+          border-color: #1873D3;
           outline: none;
+        }
+        .output-container {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 20px;
+          width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        .name-output, .score-output {
+          font-size: 18px;
+          padding-left: 18px;
+          padding-right: 18px;
+          white-space: nowrap;
+        }
+        .save-button {
+          padding: 10px 20px;
+          background-color: transparent;
+          color: black;
+          border: none;
+          border-radius: 5px;
+          font-size: 12px;
+          cursor: pointer;
+          text-decoration: none;
+          margin-top: 18px;
+          display: inline-block;
+          transition: background-color 0.3s ease;
+          position: absolute;
+          right: 10px;
+        }
+        .saved-button:hover{
+          background-color: #1873D3;
         }
       </style>
   </head>
   <body>
     <h1>ProfScores</h1>
-    <div class="form-container">
-      <input type="text" id="professor" name="professor" placeholder="Enter Professor Name">
+    <form action="#" method="get">
+      <div class="form-container">
+        <input type="text" id="professor" name="professor" placeholder="Enter Professor Name" required>
+        <a href="saved-professor.html" class="save-button">Saved Professors</a>
+      </div>
+    </form>
+    <hr>
+    <div class="output-container">
+      <div class="name-output"> 
+        Name: <strong></strong>
+    </div>
+    <div class="score-output"> 
+      Score: <strong></strong>
     </div>
   </body>
-</html>
+  </html>
