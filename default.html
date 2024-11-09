@@ -1,109 +1,55 @@
 <!DOCTYPE html>
-<html> 
-  <head>
-      <meta charset="utf-8">
-      <meta name="viewport" content="width=device-width ,initial-scale=1.0">
-      <title>ProfScores</title>
-      <style>
-        body {
-          background-color: white;
-          color: black;
-          margin: 0;
-          font-family: 'Courier New', monospace;
-        }
-        hr {
-          border: 0;
-          height: 2px;
-          background-color: gray;
-          width: 100%;
-          margin: 23px auto;
-        }
-        label {
-          font-size: 18px;
-          color: black; 
-          margin-bottom: 8px;
-          display: block;
-        }
-        h1 {
-          position: absolute;
-          top: 10px;
-          left: 10px;
-          font-size: 20px;
-          margin: 0;
-          text-shadow: 0px 5px 10px rgba(0, 0, 0, 0.6);
-        }
-        .form-container {
-          margin-top: 60px; 
-          padding-left: 10px; 
-        }
-        label {
-          font-size: 18px;
-          color: black; 
-          margin-bottom: 8px;
-          display: block;
-        }
-        input[type="text"] {
-          padding: 8px 10px;
-          font-size: 16px;
-          width: 250px;
-          border: none;
-          border-bottom: 2px solid #ccc;
-          background-color: transparent;
-          color: black;
-        }
-        input[type="text"]:focus {
-          border-color: #1873D3;
-          outline: none;
-        }
-        .output-container {
-          display: flex;
-          justify-content: space-between;
-          margin-top: 20px;
-          width: 100%;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        .name-output, .score-output {
-          font-size: 18px;
-          padding-left: 18px;
-          padding-right: 18px;
-          white-space: nowrap;
-        }
-        .save-button {
-          padding: 10px 20px;
-          background-color: transparent;
-          color: black;
-          border: none;
-          border-radius: 5px;
-          font-size: 12px;
-          cursor: pointer;
-          text-decoration: none;
-          margin-top: 18px;
-          display: inline-block;
-          transition: background-color 0.3s ease;
-          position: absolute;
-          right: 10px;
-        }
-        .saved-button:hover{
-          background-color: #1873D3;
-        }
-      </style>
-  </head>
-  <body>
-    <h1>ProfScores</h1>
-    <form action="#" method="get">
-      <div class="form-container">
-        <input type="text" id="professor" name="professor" placeholder="Enter Professor Name" required>
-        <a href="saved-professor.html" class="save-button">Saved Professors</a>
-      </div>
-    </form>
-    <hr>
-    <div class="output-container">
-      <div class="name-output"> 
-        Name: <strong></strong>
-    </div>
-    <div class="score-output"> 
-      Score: <strong></strong>
-    </div>
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ProfScores</title>
+  <style>
+    body {
+      background-color: #1a1a1a;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      height: 100vh;
+      margin: 0;
+      font-family: 'Courier New', Courier, monospace;
+      gap: 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin: 0;
+      text-align: center;
+    }
+
+    .line-input {
+      background-color: transparent;
+      border: none;
+      border-bottom: 2px solid #ffffff;
+      color: #ffffff;
+      padding: 10px 0;
+      font-size: 1em;
+      width: 50%;
+      text-align: center;
+      outline: none;
+      transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .line-input:focus {
+      border-bottom: 2px solid #00bfff;
+      box-shadow: 0px 4px 12px rgba(0, 191, 255, 0.7);
+    }
+
+    .line-input::placeholder {
+      color: #ffffff;
+      opacity: 0.7;
+    }
+  </style>
+</head>
+<body>
+  <h1>ProfScores</h1>
+  <input type="text" class="line-input" placeholder="Enter professor's name">
+</body>
+</html>
