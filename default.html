@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +14,8 @@
       justify-content: center;
       flex-direction: column;
       height: 100vh;
+      width: 400px;
+      /* Set the width of the popup */
       margin: 0;
       font-family: 'Courier New', Courier, monospace;
       gap: 20px;
@@ -46,10 +49,44 @@
       color: #ffffff;
       opacity: 0.7;
     }
+
+    .submit-button {
+      background-color: #00bfff;
+      color: #ffffff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .submit-button:hover {
+      background-color: #007f8d;
+    }
   </style>
 </head>
+
 <body>
   <h1>ProfScores</h1>
-  <input type="text" class="line-input" placeholder="Enter professor's name">
+  <input type="text" class="line-input" id="profName" placeholder="Enter professor's name">
+  <button class="submit-button" id="searchProf">Search</button>
+
+  <script>
+    document.getElementById('searchProf').addEventListener('click', function () {
+      var professorName = document.getElementById('profName').value.trim();
+
+      if (professorName) {
+        console.log('Searching for: ' + professorName);
+        // Here you can add logic to query an API, scrape data, or use content scripts
+        // For example, you can store the professor's name in storage:
+        chrome.storage.local.set({ professorName: professorName }, function () {
+          console.log('Professor name saved: ' + professorName);
+        });
+      } else {
+        alert('Please enter a professor\'s name.');
+      }
+    });
+  </script>
 </body>
+
 </html>
