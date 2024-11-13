@@ -6,6 +6,8 @@ document.addEventListener("mouseover", async (event) => {
     target.parentElement.classList.contains("success") &&
     Array.from(target.parentElement.children).indexOf(target) === 8
   ) {
+
+
     const instructorName = target.innerText.trim();
 
     if (document.querySelector(".rmp-popup")) return;
@@ -45,8 +47,9 @@ document.addEventListener("mouseover", async (event) => {
 async function fetchRMPStats(name) {
   try {
     console.log(name)
-    // const response = await fetch(`https://api.example.com/rmp?name=${encodeURIComponent(name)}`);
-    // return await response.json();
+   
+    
+
   } catch (error) {
     console.error("Failed to fetch RMP stats:", error);
     return null;
